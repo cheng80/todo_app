@@ -15,7 +15,7 @@ todo_app/
     ├── product/
     │   └── 기획서.md
     └── plans/
-        └── 기능명.md
+        └── TASK-001-기능명.md
 ```
 
 `reference/`는 템플릿과 운영 문서를 보관하는 읽기 전용 참고 폴더다. 실제 작업 문서는 프로젝트 루트의 `AGENTS.md`와 `docs/`에 만들며, Codex는 `reference/` 원본을 수정하지 않는다.
@@ -27,7 +27,7 @@ todo_app/
 3. `reference/간소화-프로젝트-기획-템플릿/templates/docs/`를 프로젝트의 `docs/`로 복사한다.
 4. `AGENTS.md`의 프로젝트 개요와 실행·검증 명령을 채운다.
 5. `docs/product/기획서.md`에 전체 MVP와 제외 범위를 작성한다.
-6. 첫 기능을 시작할 때 `docs/plans/작업-Plan.md`를 복사해 기능명으로 바꾼다.
+6. 첫 기능을 시작할 때 `docs/plans/작업-Plan.md`를 복사해 `TASK-001-기능명.md`로 바꾼다.
 
 ## Worktree와 브랜치
 
@@ -37,6 +37,8 @@ todo_app/
 작업 하나 = Codex task 하나 = Worktree 하나 = feature 브랜치 하나 = Pull Request 하나
 ```
 
+작업 ID는 `docs/plans/`과 열린 Pull Request에서 가장 큰 번호 다음으로 `TASK-001`, `TASK-002`처럼 부여한다. 취소된 작업 Plan도 삭제하지 않고 보존하며, ID는 재사용하지 않는다. 같은 ID를 Worktree, 브랜치, Plan, 커밋, Pull Request에 사용한다. 요구사항 ID인 `REQ-001`과는 별개다.
+
 ## 기본 문서와 확장 문서
 
 | 문서 | 언제 작성하나 | 무엇을 적나 |
@@ -44,7 +46,7 @@ todo_app/
 | `AGENTS.md` | 프로젝트 시작 | 반복 규칙, 명령어, 검증 기준 |
 | `START_HERE.md` | 프로젝트 시작 | 새 세션의 읽기 순서와 시작 규칙 |
 | `docs/product/기획서.md` | 프로젝트 시작 | 전체 목표, MVP, 요구사항, 기술 결정 |
-| `docs/plans/기능명.md` | 기능 시작 | 이번 기능의 범위, 구현 순서, 검증 |
+| `docs/plans/TASK-001-기능명.md` | 기능 시작 | 이번 기능의 범위, 구현 순서, 검증 |
 
 다음 문서는 필요할 때만 추가한다.
 
@@ -68,7 +70,7 @@ reference/간소화-프로젝트-기획-템플릿/templates/의 AGENTS.md와 기
 ### 2. 기능 Plan 작성
 
 ```text
-루트 AGENTS.md와 docs/product/기획서.md, reference/간소화-프로젝트-기획-템플릿/templates/docs/plans/작업-Plan.md를 읽어줘. reference는 수정하지 말고, [기능 이름]의 범위와 완료 조건을 docs/plans/[기능 이름].md에만 작성해줘. 코드 변경은 하지 마.
+루트 AGENTS.md와 docs/product/기획서.md, reference/간소화-프로젝트-기획-템플릿/templates/docs/plans/작업-Plan.md를 읽어줘. reference는 수정하지 말고, 새 작업 ID를 부여한 뒤 [기능 이름]의 범위와 완료 조건을 docs/plans/TASK-001-[기능 이름].md에만 작성해줘. 코드 변경은 하지 마.
 ```
 
 ### 3. 기능 구현

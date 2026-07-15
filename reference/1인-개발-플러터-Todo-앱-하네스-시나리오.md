@@ -22,13 +22,13 @@ todo_app/
 ├── AGENTS.md
 └── docs/
     ├── product/기획서.md
-    └── plans/todo-crud.md
+    └── plans/TASK-001-todo-crud.md
 ```
 
 - `AGENTS.md`: 실제 Flutter 명령어와 반복 규칙
 - `START_HERE.md`: 새 세션의 읽기 순서와 시작 규칙
 - `기획서.md`: Todo 앱 전체 MVP와 기술 결정
-- `todo-crud.md`: 이번 CRUD 기능의 구현·검증 Plan
+- `TASK-001-todo-crud.md`: 이번 CRUD 기능의 구현·검증 Plan
 
 전체 기획서는 시작할 때 한 번 작성한다. 이후 기능마다 기획서를 다시 만들지 않고 `docs/plans/`에 Plan만 추가한다.
 
@@ -105,12 +105,12 @@ Codex는 다음만 기록한다.
 
 ### 3. Worktree와 feature 브랜치, 작업 Plan
 
-첫 기능은 `feature/todo-crud` Worktree에서 진행한다. 기본 checkout은 `main` 확인·병합·정리에만 사용하고, 기능 구현은 항상 독립 Worktree에서 진행한다.
+첫 기능에는 `TASK-001`을 부여한다. `TASK-001-todo-crud` Worktree와 `feature/TASK-001-todo-crud` 브랜치에서 진행한다. 기본 checkout은 `main` 확인·병합·정리에만 사용하고, 기능 구현은 항상 독립 Worktree에서 진행한다.
 
 사람:
 
 ```text
-루트 AGENTS.md와 docs/product/기획서.md, reference/간소화-프로젝트-기획-템플릿/templates/docs/plans/작업-Plan.md를 읽어줘. reference는 수정하지 말고, 현재 브랜치와 변경사항, 기존 Worktree를 확인해줘. 문제 없으면 최신 main 기준으로 feature/todo-crud Worktree와 브랜치를 만들고 docs/plans/todo-crud.md만 작성해줘. 코드 수정은 하지 마.
+루트 AGENTS.md와 docs/product/기획서.md, reference/간소화-프로젝트-기획-템플릿/templates/docs/plans/작업-Plan.md를 읽어줘. reference는 수정하지 말고, 현재 브랜치와 변경사항, 기존 Worktree를 확인해줘. 문제 없으면 최신 main 기준으로 TASK-001-todo-crud Worktree와 feature/TASK-001-todo-crud 브랜치를 만들고 docs/plans/TASK-001-todo-crud.md만 작성해줘. 코드 수정은 하지 마.
 ```
 
 Plan에는 Todo 생성·조회·수정·삭제, SQLite 저장 흐름, 빈 제목·빈 목록·저장 실패, 검증, 제외 범위만 포함한다.
@@ -173,10 +173,10 @@ PR의 CI와 diff를 확인했어. 스쿼시 Merge하고 feature 브랜치를 정
 
 ## 새 세션 재개
 
-기능이 끝나지 않은 채 새 세션을 열면 별도 `HANDOFF.md`를 만들지 않는다. 현재 `docs/plans/todo-crud.md`의 `작업 결과와 세션 인수인계`를 갱신하고, 새 세션에서 읽는다.
+기능이 끝나지 않은 채 새 세션을 열면 별도 `HANDOFF.md`를 만들지 않는다. 현재 `docs/plans/TASK-001-todo-crud.md`의 `작업 결과와 세션 인수인계`를 갱신하고, 새 세션에서 읽는다.
 
 ```text
-START_HERE.md와 docs/plans/todo-crud.md를 읽고, 진행 상태와 다음 작업만 보고해줘. 코드 수정은 하지 마.
+START_HERE.md와 docs/plans/TASK-001-todo-crud.md를 읽고, 진행 상태와 다음 작업만 보고해줘. 코드 수정은 하지 마.
 ```
 
 ## 최종 구조 예시
@@ -191,7 +191,7 @@ todo_app/
 ├── AGENTS.md
 ├── docs/
 │   ├── product/기획서.md
-│   └── plans/todo-crud.md
+│   └── plans/TASK-001-todo-crud.md
 ├── lib/features/todos/
 └── test/features/todos/
 ```
